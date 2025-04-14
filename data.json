@@ -1,0 +1,670 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": ["  "],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+     "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+     "context": [""]
+    },
+    {"tag": "adverse_drug",
+     "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
+     "responses": ["Navigating to Adverse drug reaction module"],
+     "context": [""]
+    },
+    {"tag": "blood_pressure",
+     "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
+     "responses": ["Navigating to Blood Pressure module"],
+     "context": [""]
+    },
+    {"tag": "blood_pressure_search",
+     "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+     "responses": ["Please provide Patient ID", "Patient ID?"],
+     "context": ["search_blood_pressure_by_patient_id"]
+    },
+    {"tag": "search_blood_pressure_by_patient_id",
+     "patterns": [],
+     "responses": ["Loading Blood pressure result for Patient"],
+     "context": [""]
+    },
+    {"tag": "pharmacy_search",
+     "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+     "responses": ["Please provide pharmacy name"],
+     "context": ["search_pharmacy_by_name"]
+    },
+    {"tag": "search_pharmacy_by_name",
+     "patterns": [],
+     "responses": ["Loading pharmacy details"],
+     "context": [""]
+    },
+    {
+      "tag":"coldtreatment",
+      "patterns":[
+         "Tell me the remedy to minimize the cold",
+         "how to reduce the cold?",
+         "How to reduce the cold?",
+         "How to reduce the nose sneezing?",
+         "how to reduce the nose sneezing?"
+      ],
+      "responses":[
+         "*Reducing a cold typically involves getting plenty of rest, staying hydrated and taking over-the-counter medications for symptom relief such as pain relievers for fever and sore throat \n Warm beverages like tea with honey can soothe a sore throat, and steam from a hot shower can help with congestion.\n If symptoms persist or worsen, it's best to consult a healthcare professional."
+         
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {"tag": "coldsymptoms",
+   "patterns": ["tell me the symptoms of cold","Tell me the symptoms of cold" ],
+   "responses": ["Pain or irritation in the throat, Mild muscle aches or a general feeling of being unwell, loss of smell, Frequent sneezing"],
+   "context": [""]
+  },
+    
+    {"tag": "hospital_search",
+     "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+     "responses": ["Please provide hospital name or location"],
+     "context": ["search_hospital_by_params"]
+    },
+    
+     {
+        "tag":"coughsymptoms",
+        "patterns":[
+           "how to reduce the cough?",
+           "How to reduce the cough?",
+           "How to reduce the coldcough?",
+           "how to reduce the coldcough?",
+           "Give me the remedies to reduce the cough?",
+           "give me the remedies to reduce the cough?"
+        ],
+        "responses":[
+           "Drink plenty of fluids like water, herbal tea, or warm broth to keep your throat moist.",
+           "Gargling with warm saltwater can help soothe throat irritation and reduce coughing.",
+           "Sucking on cough drops or lozenges can temporarily relieve coughing by numbing the throat and increasing saliva production.",
+           "Getting enough rest can help your body recover and alleviate coughing."
+           
+        ],
+        "context":[
+           ""
+        ]
+     },
+     {
+        "tag":"coughwithfever",
+        "patterns":[
+           "how to reduce the cough with fever?",
+           "How to reduce the cough with fever?",
+           "Give me the remedies to reduce the cough with fever?",
+           "give me the remedies to reduce the cough with fever?"
+        ],
+        "responses":[
+           "Drink plenty of fluids like water, herbal tea, or electrolyte solutions to stay hydrated and help loosen mucus.Taking a warm bath or shower can help soothe your body and relieve muscle aches associated with fever.",
+           "Get plenty of rest to allow your body to fight off the infection causing the cough and fever.Inhaling steam from a bowl of hot water or taking a hot shower can help loosen mucus and relieve coughing.",
+           "Taking a warm bath or shower can help soothe your body and relieve muscle aches associated with fever.Get plenty of rest to allow your body to fight off the infection causing the cough and fever.",
+           "Inhaling steam from a bowl of hot water or taking a hot shower can help loosen mucus and relieve coughing.Drink plenty of fluids like water, herbal tea, or electrolyte solutions to stay hydrated and help loosen mucus."
+           
+        ],
+        "context":[
+           ""
+        ]
+     },
+     {
+        "tag":"kidneystones",
+        "patterns":[
+           "how to remove the stones in kidneys?",
+           "How to remove the stones in kidneys?",
+           "how to cure the kidney stones?",
+           "Give me the remedies to remove the stones in kidneys?",
+           "give me the remedies remove the stones in kidneys?"
+        ],
+        "responses":[
+           "Drinking plenty of water is one of the most effective ways to prevent kidney stones and help flush out small stones or crystals before they become larger. Aim to drink at least 8-10 glasses of water per day, or enough to keep your urine clear.",
+           "Some people claim that a mixture of lemon juice and olive oil may help dissolve kidney stones and ease their passage. Mix equal parts of lemon juice and olive oil, then drink it followed by plenty of water. However, there's limited scientific evidence to support this remedy.",
+           "In cases where kidney stones are too large to pass naturally or are causing severe symptoms, medical intervention may be necessary. Treatment options may include extracorporeal shock wave lithotripsy (ESWL), ureteroscopy, or surgical removal."
+           
+           
+        ],
+        "context":[
+           ""
+        ]
+     },
+     {
+        "tag":"skindiseases",
+        "patterns":[
+           "tell me how to remove the skin disease?",
+           "How to remove the skin disease?",
+           "Give me the remedies to remove the skin disease?",
+           "give me the remedies to remove the skin disease?"
+        ],
+        "responses":[
+           "Wash your face and body regularly with a gentle cleanser to remove dirt, oil, and bacteria that can contribute to skin problems.Drink plenty of water throughout the day to keep your skin hydrated and maintain its elasticity.",
+           "Wear sunscreen with a broad-spectrum SPF of 30 or higher every day, even on cloudy days.Include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats in your diet to provide essential nutrients for skin health.",
+           "Include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats in your diet to provide essential nutrients for skin health.",
+           "Drink plenty of water throughout the day to keep your skin hydrated and maintain its elasticity.Wear sunscreen with a broad-spectrum SPF of 30 or higher every day, even on cloudy days." 
+        ],
+        "context":[
+           ""
+        ]
+     },
+     {
+      "tag":"Heartdiseases",
+      "patterns":[
+         "tell me how to cure the heart disease?",
+         "How to cure the heart disease in our body?",
+         "Give me the remedies to cure the heart disease in our body?",
+         "give me the remedies to remove the heart disease in my body?"
+      ],
+      "responses":[
+         "Heart disease cannot be fully cured, but it can be effectively managed and its progression slowed with a combination of a healthy diet, regular exercise, quitting smoking, and adhering to prescribed medications.\n Regular medical check-ups and managing risk factors like high blood pressure, cholesterol, and diabetes are crucial. \n Always consult with a healthcare provider for a personalized treatment plan." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"Headache",
+      "patterns":[
+         "tell me how to cure the headache?",
+         "How to cure the headache?",
+         "Give me the remedies to cure the headache",
+         "give me the remedies to cure the headache"
+      ],
+      "responses":[
+         "To cure a headache, stay hydrated by drinking plenty of water, as dehydration can trigger headaches. Rest in a dark, quiet room to reduce sensory stimulation. Over-the-counter pain relievers like ibuprofen or acetaminophen can help alleviate pain. Applying a cold or warm compress to your forehead or neck can also provide relief. If headaches persist, consult a healthcare professional." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"stomachpain",
+      "patterns":[
+         "tell me how to cure the stomach-pain?",
+         "How to cure the stomach-pain?",
+         "Give me the remedies to cure the stomach-pain",
+         "give me the remedies to cure the stomach-pain"
+      ],
+      "responses":[
+         "To alleviate stomach pain, drink clear fluids like water, herbal tea, or broth to stay hydrated. Eat bland foods such as bananas, rice, applesauce, and toast (BRAT diet) to ease digestion. Over-the-counter medications like antacids can help with acid-related pain. Rest and avoid foods and drinks that might irritate the stomach, such as spicy foods, caffeine, and alcohol. If pain persists or is severe, consult a healthcare professional." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"diabetes",
+      "patterns":[
+         "tell me how to cure the diabetes?",
+         "How to cure the diabetes?",
+         "Give me the remedies to cure the diabetes",
+         "give me the remedies to cure the diabetes"
+      ],
+      "responses":[
+         "Diabetes management involves maintaining a healthy diet low in refined sugars and high in fiber, regular physical activity, and monitoring blood sugar levels. Medications or insulin therapy may be required as prescribed by a healthcare provider. Lifestyle changes like weight management and quitting smoking can also significantly help control diabetes. Always consult a healthcare professional for personalized treatment." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"handfracture",
+      "patterns":[
+         "tell me how to cure the hand fracture?",
+         "How to cure the hand fracture?",
+         "Give me the remedies to cure the hand fracture",
+         "give me the remedies to cure the hand fracture"
+      ],
+      "responses":[
+         "For a hand fracture, immobilize the hand with a splint or brace and apply ice to reduce swelling. Keep the hand elevated to minimize swelling and take over-the-counter pain relievers if necessary. Seek immediate medical attention for proper diagnosis and treatment, which may include a cast or surgery. Follow your doctor's instructions for recovery and rehabilitation." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"legfracture",
+      "patterns":[
+         "tell me how to cure the leg fracture?",
+         "How to cure the leg fracture?",
+         "Give me the remedies to cure the leg fracture",
+         "give me the remedies to cure the leg fracture"
+      ],
+      "responses":[
+         "For a leg fracture, immobilize the leg with a splint, brace, or cast to prevent further injury. Elevate the leg to reduce swelling and apply ice packs intermittently. Seek immediate medical attention for proper diagnosis and treatment, which may involve surgery or traction. Follow your doctor's instructions for rest, rehabilitation exercises, and monitoring for complications." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"earpain",
+      "patterns":[
+         "tell me how to cure the ear pain?",
+         "How to cure the ear pain?",
+         "Give me the remedies to cure the ear pain",
+         "give me the remedies to cure the ear pain"
+      ],
+      "responses":[
+         "For ear pain, apply a warm compress to the affected ear to relieve discomfort. Over-the-counter pain relievers like ibuprofen or acetaminophen can help reduce pain and inflammation. Avoid inserting anything into the ear canal and consult a doctor if the pain persists or is accompanied by other symptoms like fever or hearing loss." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"wound",
+      "patterns":[
+         "tell me how to cure the wound?",
+         "How to cure the wound?",
+         "Give me the remedies to cure the wound",
+         "give me the remedies to cure the wound"
+      ],
+      "responses":[
+         "To treat wounds, clean the affected area with mild soap and water to remove dirt and bacteria. Apply an antibiotic ointment and cover the wound with a sterile bandage to protect it from infection. Monitor for signs of infection such as redness, swelling, or pus, and seek medical attention if necessary. Keep the wound clean and dry, and change the bandage regularly." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"thyroid",
+      "patterns":[
+         "tell me how to cure the thyroid?",
+         "How to cure the thyroid?",
+         "Give me the remedies to cure the thyroid",
+         "give me the remedies to cure the thyroid"
+      ],
+      "responses":[
+         "For thyroid disorders, it’s crucial to follow the treatment plan prescribed by a healthcare professional. This may include medication such as levothyroxine for hypothyroidism or antithyroid drugs for hyperthyroidism. Regular monitoring of thyroid levels through blood tests is important to adjust treatment as needed. Additionally, maintaining a balanced diet rich in iodine, selenium, and zinc can support thyroid health." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"vomiting",
+      "patterns":[
+         "tell me how to cure the vomiting?",
+         "How to cure the vomiting?",
+         "Give me the remedies to cure the vomiting",
+         "give me the remedies to cure the vomiting"
+      ],
+      "responses":[
+         "To cure vomiting, stay hydrated by sipping small amounts of clear fluids like water or oral rehydration solutions. Avoid solid foods until vomiting stops, then gradually reintroduce bland foods like crackers, rice, or toast. Rest and avoid strong odors or foods that may trigger nausea. If vomiting persists or is accompanied by severe symptoms, seek medical attention." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"toothpain",
+      "patterns":[
+         "tell me how to cure the tooth pain?",
+         "How to cure the tooth pain?",
+         "Give me the remedies to cure the tooth pain",
+         "give me the remedies to cure the tooth pain"
+      ],
+      "responses":[
+         "For tooth pain, rinse your mouth with warm salt water to reduce inflammation and clean the affected area. Take over-the-counter pain relievers like ibuprofen or acetaminophen to manage pain. Apply a cold compress to the outside of your cheek to reduce swelling. Avoid very hot or cold foods and see a dentist as soon as possible for a proper diagnosis and treatment." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"bodypains",
+      "patterns":[
+         "tell me how to cure the body pains?",
+         "How to cure the body pains?",
+         "Give me the remedies to cure the body pains",
+         "give me the remedies to cure the body pains"
+      ],
+      "responses":[
+         "For body pains, rest and avoid activities that exacerbate the pain. Over-the-counter pain relievers like ibuprofen or acetaminophen can help manage discomfort. Apply heat or cold packs to the affected areas to reduce pain and inflammation. Stay hydrated, maintain a balanced diet, and consider gentle stretching or low-impact exercises to improve circulation and alleviate stiffness. If pain persists, consult a healthcare professional." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"backpain",
+      "patterns":[
+         "tell me how to cure the back pain?",
+         "How to cure the back pain?",
+         "Give me the remedies to cure the back pain",
+         "give me the remedies to cure the back pain"
+      ],
+      "responses":[
+         "For back pain, apply ice or heat to the affected area to reduce inflammation and ease discomfort. Over-the-counter pain relievers like ibuprofen or acetaminophen can help manage pain. Engage in gentle stretching and low-impact exercises to improve flexibility and strengthen back muscles. Maintain good posture and avoid heavy lifting; if pain persists, consult a healthcare professional for further evaluation and treatment." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"neckpain",
+      "patterns":[
+         "tell me how to cure the neck pain?",
+         "How to cure the neck pain?",
+         "Give me the remedies to cure the neck pain",
+         "give me the remedies to cure the neck pain"
+      ],
+      "responses":[
+         "For neck pain, apply ice for the first 48 hours to reduce inflammation, then use heat to relax muscles. Over-the-counter pain relievers like ibuprofen or acetaminophen can help manage discomfort. Perform gentle neck stretches and exercises to improve mobility and reduce stiffness. Maintain good posture and avoid activities that strain the neck; if pain persists or is severe, consult a healthcare professional." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"skinirritation",
+      "patterns":[
+         "tell me how to cure the skin irritation?",
+         "How to cure the skin irritation?",
+         "Give me the remedies to cure the skin irritation",
+         "give me the remedies to cure the skin irritation"
+      ],
+      "responses":[
+         "For skin irritation, keep the affected area clean and dry. Apply a soothing lotion or cream, such as those containing aloe vera or hydrocortisone, to reduce itching and inflammation. Avoid scratching and wear loose, breathable clothing to prevent further irritation. If symptoms persist or worsen, seek advice from a healthcare professional." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"pimples",
+      "patterns":[
+         "tell me how to cure the pimples?",
+         "How to cure the pimples?",
+         "Give me the remedies to cure the pimples",
+         "give me the remedies to cure the pimples"
+      ],
+      "responses":[
+         "For pimples, cleanse your face gently with a mild cleanser twice daily to remove excess oil and dirt. Apply over-the-counter acne treatments containing benzoyl peroxide or salicylic acid to target pimples. Avoid picking or squeezing pimples to prevent scarring and further irritation. Maintain a healthy diet, stay hydrated, and avoid touching your face frequently. If acne persists, consult a dermatologist for personalized treatment options." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"eyeirritation",
+      "patterns":[
+         "tell me how to cure the eye irritation?",
+         "How to cure the eye irritation?",
+         "Give me the remedies to cure the eye irritation",
+         "give me the remedies to cure the eye irritation"
+      ],
+      "responses":[
+         "To alleviate eye irritation, rinse the affected eye with clean water or a sterile saline solution to flush out irritants. Avoid rubbing the eyes, as this can exacerbate the irritation. Apply a cold compress over closed eyelids to soothe inflammation. If symptoms persist or worsen, seek medical advice from an eye doctor." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"Blood_pressure",
+      "patterns":[
+         "tell me how to cure the blood pressure(bp)?",
+         "How to cure the BP(blood pressure)?",
+         "Give me the remedies to cure the blood pressure(bp)",
+         "give me the remedies to cure the BP(blood pressure)"
+      ],
+      "responses":[
+         "To manage high blood pressure (hypertension), reduce salt intake, eat a balanced diet rich in fruits, vegetables, and whole grains, and exercise regularly. Maintain a healthy weight, limit alcohol consumption, and avoid smoking. Stress management techniques like meditation or yoga can also help. Medications may be prescribed by a healthcare provider if lifestyle changes are not sufficient." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"asthma",
+      "patterns":[
+         "tell me how to cure the asthma?",
+         "How to cure the asthma?",
+         "Give me the remedies to cure the asthma",
+         "give me the remedies to cure the asthma"
+      ],
+      "responses":[
+         "Asthma management includes avoiding triggers such as allergens and pollutants, using prescribed inhalers (both rescue and maintenance types), and taking medications as directed. Regular monitoring of symptoms and lung function can help manage the condition. Lifestyle changes like maintaining a healthy weight, exercising regularly, and avoiding smoking can also improve asthma control. Always follow a healthcare provider's guidance for personalized treatment." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"corona",
+      "patterns":[
+         "tell me how to cure the corona virus(covid-19)?",
+         "How to cure the corona virus(covid-19)?",
+         "Give me the remedies to cure the corona virus(covid-19)",
+         "give me the remedies to cure the corona virus(covid-19)"
+      ],
+      "responses":[
+         "COVID-19 management includes isolating to prevent spread, resting, staying hydrated, and taking over-the-counter medications for symptom relief. Seek medical attention if symptoms worsen or if you have underlying health conditions. Vaccination is crucial for prevention and reducing the severity of the disease. Follow public health guidelines, including wearing masks and practicing good hygiene, to prevent infection." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"HIV/AIDS",
+      "patterns":[
+         "tell me how to cure the HIV/AIDS?",
+         "How to cure the hiv/aids?",
+         "Give me the remedies to cure the HIV/AIDS",
+         "give me the remedies to cure the hiv/aids"
+      ],
+      "responses":[
+         "HIV/AIDS cannot be cured, but it can be managed with antiretroviral therapy (ART), which helps maintain a low viral load and boosts immune function. Regular medical care and adherence to ART can prevent progression to AIDS and reduce the risk of transmission. Maintaining a healthy lifestyle, including a balanced diet, regular exercise, and avoiding risky behaviors, supports overall health. Always consult healthcare providers for personalized treatment and management plans." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"cancer",
+      "patterns":[
+         "tell me how to cure the cancer?",
+         "How to cure the cancer?",
+         "Give me the remedies to cure the cancer",
+         "give me the remedies to cure the cancer"
+      ],
+      "responses":[
+         "Cancer treatment depends on the type and stage of cancer and may include surgery, chemotherapy, radiation therapy, immunotherapy, and targeted therapy. Early detection and a personalized treatment plan from healthcare professionals are crucial for effective management. Complementary approaches like a balanced diet, regular exercise, and stress management can support overall health during treatment. Always follow the guidance of oncologists and medical experts." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"malaria",
+      "patterns":[
+         "tell me how to cure the malaria?",
+         "How to cure the malaria?",
+         "Give me the remedies to cure the malaria",
+         "give me the remedies to cure the malaria"
+      ],
+      "responses":[
+         "Malaria treatment typically involves antimalarial medications prescribed by healthcare professionals based on the type of malaria and its severity. Common medications include chloroquine, artemisinin-based combination therapies (ACTs), and others. Preventive measures like sleeping under insecticide-treated bed nets and using insect repellents can help reduce the risk of malaria transmission. Prompt diagnosis and treatment are essential to prevent complications and reduce the spread of the disease." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"dengue",
+      "patterns":[
+         "tell me how to cure the dengue?",
+         "How to cure the dengue?",
+         "Give me the remedies to cure the dengue",
+         "give me the remedies to cure the dengue"
+      ],
+      "responses":[
+         "There's no specific cure for dengue, but treatment focuses on relieving symptoms and preventing complications. Rest, hydration, and pain relievers like acetaminophen can alleviate fever and discomfort. However, avoid non-steroidal anti-inflammatory drugs (NSAIDs) like ibuprofen and aspirin, which can increase the risk of bleeding. Seek medical attention immediately if symptoms worsen, especially if experiencing severe dengue symptoms like persistent vomiting, severe abdominal pain, or bleeding." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"Rheumatoid arthritis",
+      "patterns":[
+         "tell me how to cure the Rheumatoid arthritis?",
+         "How to cure the Rheumatoid arthritis?",
+         "Give me the remedies to cure the Rheumatoid arthritis",
+         "give me the remedies to cure the Rheumatoid arthritis"
+      ],
+      "responses":[
+         "Rheumatoid arthritis (RA) has no cure, but treatment aims to manage symptoms and slow disease progression. Medications such as disease-modifying antirheumatic drugs (DMARDs), corticosteroids, and biologic agents help control inflammation and pain. Physical therapy, regular exercise, and lifestyle modifications like stress management and a balanced diet can improve joint function and overall well-being. Regular monitoring by healthcare professionals is essential to adjust treatment and prevent complications."
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"tuberculosis",
+      "patterns":[
+         "tell me how to cure the Tuberculosis(TB)?",
+         "How to cure the tuberculosis(TB)?",
+         "Give me the remedies to cure the tuberculosis(TB)",
+         "give me the remedies to cure the tuberculosis(TB)"
+      ],
+      "responses":[
+         "Tuberculosis (TB) treatment involves a course of antibiotics for several months, typically a combination of drugs to prevent drug resistance. It's essential to take medications exactly as prescribed and complete the full course of treatment. Adequate rest, proper nutrition, and maintaining good hygiene help support recovery. Regular follow-up with healthcare providers is necessary to monitor progress and ensure successful treatment." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"jaundice",
+      "patterns":[
+         "tell me how to cure the jaundice?",
+         "How to cure the jaundice?",
+         "Give me the remedies to cure the jaundice",
+         "give me the remedies to cure the jaundice"
+      ],
+      "responses":[
+         "Treatment for jaundice depends on its underlying cause. For viral hepatitis, rest and supportive care are recommended, along with antiviral medications if necessary. In cases of obstructive jaundice, surgery may be needed to remove blockages. Ensuring adequate hydration and nutrition while avoiding alcohol and certain medications that can exacerbate liver damage are essential. Consultation with a healthcare provider is crucial for proper diagnosis and management." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"typhoid",
+      "patterns":[
+         "tell me how to cure the typhoid?",
+         "How to cure the typhoid?",
+         "Give me the remedies to cure the typhoid",
+         "give me the remedies to cure the typhoid"
+      ],
+      "responses":[
+         "Treatment for typhoid fever typically involves antibiotics prescribed by a healthcare professional. Commonly used antibiotics include fluoroquinolones and cephalosporins. Adequate hydration and rest are essential for recovery. Avoiding contaminated food and water sources can prevent typhoid transmission. If symptoms worsen or persist, seek medical attention promptly." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"diarrhea",
+      "patterns":[
+         "tell me how to cure the diarrhea?",
+         "How to cure the diarrhea?",
+         "Give me the remedies to cure the diarrhea",
+         "give me the remedies to cure the diarrhea"
+      ],
+      "responses":[
+         "To treat diarrhea, focus on staying hydrated by drinking plenty of fluids like water, oral rehydration solutions, and clear broths. Avoiding foods and drinks that can worsen diarrhea, such as dairy products, caffeine, and greasy foods, is crucial. Over-the-counter medications like loperamide (Imodium) can help reduce frequency of bowel movements, but they should be used cautiously and under a healthcare provider's guidance, especially in certain cases like bacterial infections. If diarrhea persists for more than a few days or is accompanied by severe symptoms, seek medical attention." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"chickenpox",
+      "patterns":[
+         "tell me how to cure the chickenpox?",
+         "How to cure the chickenpox?",
+         "Give me the remedies to cure the chickenpox",
+         "give me the remedies to cure the chickenpox"
+      ],
+      "responses":[
+         "Chickenpox treatment primarily focuses on managing symptoms. This includes taking over-the-counter medications such as acetaminophen (paracetamol) to reduce fever and relieve itching. Calamine lotion or colloidal oatmeal baths can soothe skin irritation. It's crucial to keep the affected person isolated to prevent spreading the virus and to ensure they get plenty of rest and hydration. Consult a healthcare provider for specific advice, especially for high-risk individuals such as pregnant women or those with weakened immune systems." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"stayhealthy",
+      "patterns":[
+         "tell me how to stay healthy?",
+         "How to stay healthy?",
+         "Give me the remedies to stay healthy",
+         "give me the remedies to stay healthy"
+      ],
+      "responses":[
+         "To stay healthy, maintain a balanced diet rich in fruits, vegetables, whole grains, and lean proteins. Exercise regularly, aiming for at least 150 minutes of moderate activity per week. Ensure adequate sleep, manage stress through relaxation techniques, and stay hydrated. Regular medical check-ups and avoiding harmful habits like smoking and excessive alcohol consumption are also crucial for overall well-being." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"smallpox",
+      "patterns":[
+         "tell me how to cure the smallpox?",
+         "How to cure the smallpox?",
+         "Give me the remedies to cure the smallpox",
+         "give me the remedies to cure the smallpox"
+      ],
+      "responses":[
+         "Smallpox has been eradicated globally, so there's no current treatment or remedy. Historically, smallpox vaccination was used for prevention. If smallpox were to re-emerge, strict isolation of patients, supportive care, and potentially antiviral medications would be crucial. Vaccination campaigns would likely be implemented to contain outbreaks swiftly. However, as of now, smallpox is considered eradicated thanks to vaccination efforts." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+   {
+      "tag":"chikungunya",
+      "patterns":[
+         "tell me how to cure the  chikungunya?",
+         "How to cure the chikungunya?",
+         "Give me the remedies to cure the chikungunya",
+         "give me the remedies to cure the chikungunya"
+      ],
+      "responses":[
+         "There's no specific cure for chikungunya, so treatment focuses on managing symptoms. This includes rest, staying hydrated, and taking over-the-counter medications like acetaminophen to reduce fever and alleviate joint pain. Avoiding mosquito bites to prevent further transmission is essential. If symptoms worsen or persist, seek medical attention for appropriate care and management." 
+      ],
+      "context":[
+         ""
+      ]
+   },
+    {"tag": "search_hospital_by_params",
+     "patterns": [],
+     "responses": ["Please provide hospital type"],
+     "context": ["search_hospital_by_type"]
+    },
+    {"tag": "search_hospital_by_type",
+     "patterns": [],
+     "responses": ["Loading hospital details"],
+     "context": [""]
+    }
+]
+}

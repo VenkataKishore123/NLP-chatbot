@@ -1,0 +1,55 @@
+                       precision    recall  f1-score   support
+
+       Blood_pressure       1.00      1.00      1.00         4
+             HIV/AIDS       1.00      1.00      1.00         4
+             Headache       1.00      1.00      1.00         4
+        Heartdiseases       1.00      1.00      1.00         4
+ Rheumatoid arthritis       1.00      1.00      1.00         4
+         adverse_drug       1.00      1.00      1.00         5
+               asthma       1.00      1.00      1.00         4
+             backpain       1.00      1.00      1.00         4
+       blood_pressure       1.00      1.00      1.00         5
+blood_pressure_search       1.00      1.00      1.00         5
+            bodypains       1.00      1.00      1.00         4
+               cancer       1.00      1.00      1.00         4
+           chickenpox       1.00      1.00      1.00         4
+          chikungunya       1.00      1.00      1.00         4
+         coldsymptoms       1.00      1.00      1.00         2
+        coldtreatment       1.00      1.00      1.00         5
+               corona       1.00      1.00      1.00         4
+        coughsymptoms       1.00      1.00      1.00         6
+       coughwithfever       1.00      1.00      1.00         4
+               dengue       1.00      1.00      1.00         4
+             diabetes       1.00      1.00      1.00         4
+             diarrhea       1.00      1.00      1.00         4
+              earpain       1.00      1.00      1.00         4
+        eyeirritation       1.00      1.00      1.00         4
+              goodbye       1.00      1.00      1.00         5
+             greeting       1.00      1.00      1.00         7
+         handfracture       1.00      1.00      1.00         4
+      hospital_search       1.00      1.00      1.00         5
+             jaundice       1.00      1.00      1.00         4
+         kidneystones       1.00      1.00      1.00         5
+          legfracture       1.00      1.00      1.00         4
+              malaria       1.00      1.00      1.00         4
+             neckpain       1.00      1.00      1.00         4
+             noanswer       1.00      1.00      1.00         1
+              options       1.00      1.00      1.00         5
+      pharmacy_search       1.00      1.00      1.00         5
+              pimples       1.00      1.00      1.00         4
+         skindiseases       1.00      1.00      1.00         4
+       skinirritation       1.00      1.00      1.00         4
+             smallpox       1.00      1.00      1.00         4
+          stayhealthy       1.00      1.00      1.00         4
+          stomachpain       1.00      1.00      1.00         4
+               thanks       1.00      1.00      1.00         5
+              thyroid       1.00      1.00      1.00         4
+            toothpain       1.00      1.00      1.00         4
+         tuberculosis       1.00      1.00      1.00         4
+              typhoid       1.00      1.00      1.00         4
+             vomiting       1.00      1.00      1.00         4
+                wound       1.00      1.00      1.00         4
+
+             accuracy                           1.00       206
+            macro avg       1.00      1.00      1.00       206
+         weighted avg       1.00      1.00      1.00       206
